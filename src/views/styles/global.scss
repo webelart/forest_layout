@@ -1,0 +1,38 @@
+body {
+	background: rgb(56, 65, 67);
+	color: white;
+	font: 14px/1.2 'Inter', sans-serif;
+}
+
+a {
+	color: white;
+
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+
+	&:visited {
+		color: white;
+	}
+}
+
+.container {
+	padding: 45px 63px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 45px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .header a {
+    font-size: 15px;
+  }
+}

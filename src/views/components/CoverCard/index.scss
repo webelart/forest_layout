@@ -1,0 +1,136 @@
+.coverCard {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+
+  &__title,
+  &__title-shadow {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 180px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    text-transform: lowercase;
+  }
+
+  &__title {
+    background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(5px);
+
+    &_transparent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &__title-shadow {
+    left: 50vw;
+
+    &_white {
+      position: relative;
+      left: -50vw;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: start;
+  }
+
+  &__subTitle {
+    text-transform: uppercase;
+  }
+
+  &__link {
+    padding: 12px 20px;
+    background: white;
+    text-decoration: none;
+    color: black;
+    mix-blend-mode: screen;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:hover,
+    &:visited {
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .coverCard {
+    &__title,
+    &__title-shadow {
+      font-size: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .coverCard {
+    &__content {
+      width: 80vw;
+
+      .container {
+        gap: 20px;
+      }
+    }
+
+    &__title,
+    &__title-shadow {
+      font-size: 80px;
+    }
+
+    &__title {
+      width: 80vw;
+    }
+
+    &__title-shadow {
+      left: 80vw;
+      width: 20vw;
+
+      &_white {
+        left: -80vw;
+      }
+    }
+  }
+}
